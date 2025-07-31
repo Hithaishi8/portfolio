@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hithaishi M.V | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2f524ab5f.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #20344e, #cec5c5);
+      color: #222;
+      scroll-behavior: smooth;
+    }
+    container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*  resume button style  */
+.resume-btn {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  background: #12233e;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 100;
+  transition: background 0.2s;
+}
+.resume-btn:hover {
+  background: #20344e;
+}
+
+.profile-img {
+  position: relative;
+  z-index: 2;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  top: 120px; /* Adjust as needed */
+  transform: translateX(-50%);
+  background: #12233e;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      justify-content: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .skills li {
+      background: #655d5d;
+      margin: 10px;
+      padding: 12px 24px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .skills li:hover {
+      transform: scale(1.05);
+      background: #12233e; /* Tailwind blue-500 */
+      color: rgb(103, 98, 98);
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.6);
+    }
+  </style>
+</head>
+<body>
+     <!-- Resume Button Top Right -->
+     <a href="Hith_res.pdf" target="_blank" class="resume-btn">Resume</a>
+  <header class="hero-section">
+    
+  <header class="hero-section">
+    <div class="container">
+      <img src="profile.jpg" alt="Hithaishi M.V" class="profile-img" />
+      <span class="tooltip" id="profile-tooltip">Hello, this is Hithaishi!</span>
+      <h1 class="name">Hithaishi M.V</h1>
+      <p class="tagline">AI/ML • Information Science • Developer</p>
+
+      <div class="social-icons">
+        <a href="https://github.com/Hithaishi8" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/hithaishi-m-v-9168642b3" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+
+      <a href="mailto:Hithaishi.m.v.8@gmail.com" class="btn">Contact Me</a>
+    </div>
+  </header>
+
+  <section class="about reveal">
+    <h2>About Me</h2>
+    <p>
+      I’m an Information Science student at AJIET with a strong passion for AI and Machine Learning.
+      I've developed intelligent diagnostic systems, plant disease detectors, and student career chatbots.
+      I enjoy building real-world projects that combine logic, data, and a clean user experience.
+    </p>
+  </section>
+
+  <section class="education reveal">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BE in Information Science</strong> – AJ Institute of Engineering and Technology, Mangaluru (2022–2026)<br>
+      CGPA: 8.74 (Current)</li>
+      <li><strong>PUC (12th Grade)</strong> – Sri Adichunchanagiri Vidyavardak PU College<br>
+      Percentage: 90%</li>
+      <li><strong>SSLC (10th Grade)</strong> – Sri Adichunchanagiri Vidyavardak High School<br>
+      Percentage: 91%</li>
+    </ul>
+  </section>
+
+  <section class="skills reveal">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Flask & Streamlit</li>
+      <li>SQL / MySQL</li>
+      <li>HTML / CSS</li>
+      <li>Java (Basic)</li>
+      <li>C / C++</li>
+      <li>Git & GitHub</li>
+      <li>Eclipse</li>
+      <li>Jupyter Notebook</li>
+    </ul>
+  </section>
+
+  <section class="projects reveal">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>🧐 Intelligent Diagnosis of Ophthalmology</h3>
+      <p><strong>Technologies:</strong> Python, Streamlit, Flask, SQL, Open3D</p>
+      <ul>
+        <li>Developed a full-stack ML-powered system to diagnose ophthalmological conditions from retinal images.</li>
+        <li>Integrated Open3D for 3D visualization of eye scans, improving diagnostic accuracy and interpretability.</li>
+        <li>Deployed using Streamlit and Flask for real-time web accessibility.</li>
+        <li>Used SQL for secure storage and retrieval of patient records.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>🌿 AI Plant Disease Detection</h3>
+      <p><strong>Technologies:</strong> Python, CNN, Flask, HTML, CSS, JavaScript</p>
+      <ul>
+        <li>Trained a Convolutional Neural Network (CNN) to detect plant leaf diseases with high accuracy.</li>
+        <li>Served predictions via a Flask API with a user-friendly web frontend.</li>
+        <li>Enabled users to upload images and receive instant disease detection results.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>💬 Student Career Assistant Chatbot</h3>
+      <p><strong>Technologies:</strong> Java, Python, Flask, HTML, CSS, API Integration</p>
+      <ul>
+        <li>Built a chatbot that suggests career paths based on student interests and field of study.</li>
+        <li>Integrated APIs to fetch dynamic job and course data.</li>
+        <li>Designed a conversational UI with responsive design using HTML/CSS.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact reveal">
+    <h2>Connect with Me</h2>
+    <p>Email: <a href="mailto:Hithaishi.m.v.8@gmail.com">Hithaishi.m.v.8@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/hithaishi-m-v-9168642b3" target="_blank">linkedin.com/in/hithaishi</a></p>
+    <p>GitHub: <a href="https://github.com/Hithaishi8" target="_blank">github.com/Hithaishi8</a></p>
+  </section>
+
+  <div class="checkmark" id="check">✅ You've reached the end of my portfolio!</div>
+
+  <footer>
+    <p>&copy; 2025 Hithaishi M.V. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", function () {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+      const lastSection = reveals[reveals.length - 1];
+      const end = lastSection.getBoundingClientRect().bottom;
+      if (end < window.innerHeight) {
+        document.getElementById("check").classList.add("show");
+      }
+    });
+
+    // Tooltip for profile image
+    const profileImg = document.querySelector('.profile-img');
+    const tooltip = document.getElementById('profile-tooltip');
+
+    profileImg.addEventListener('mouseenter', () => {
+      tooltip.style.opacity = 1;
+    });
+    profileImg.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = 0;
+    });
+</script>
+</body>
+</html>
