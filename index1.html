@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hithaishi M.V | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2f524ab5f.js" crossorigin="anonymous"></script>
   <style>
@@ -22,10 +22,11 @@
   align-items: center;
 }
 /*  resume button style  */
-.resume-btn {
-  position: fixed;
-  top: 24px;
-  right: 32px;
+/* Add this to your <style> tag or style1.css */
+.resume-btn.below-photo {
+  position: static;
+  display: inline-block;
+  margin: 18px auto 0 auto;
   background: #12233e;
   color: #fff;
   padding: 10px 22px;
@@ -33,12 +34,16 @@
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  z-index: 100;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.3s, box-shadow 0.3s;
+  animation: pulse 2s infinite;
 }
-.resume-btn:hover {
+.resume-btn.below-photo:hover {
   background: #20344e;
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(32, 52, 78, 0.3);
+  animation: none;
 }
+
 
 .profile-img {
   position: relative;
@@ -62,38 +67,13 @@
   z-index: 10;
 }
 
-    .skills ul {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      padding: 0;
-      justify-content: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .skills li {
-      background: #655d5d;
-      margin: 10px;
-      padding: 12px 24px;
-      border-radius: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .skills li:hover {
-      transform: scale(1.05);
-      background: #12233e; /* Tailwind blue-500 */
-      color: rgb(103, 98, 98);
-      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.6);
-    }
+   
   </style>
 </head>
 <body>
      <!-- Resume Button Top Right -->
-     <a href="Hith_res.pdf" target="_blank" class="resume-btn">Resume</a>
-  <header class="hero-section">
+     
+ 
     
   <header class="hero-section">
     <div class="container">
@@ -101,13 +81,11 @@
       <span class="tooltip" id="profile-tooltip">Hello, this is Hithaishi!</span>
       <h1 class="name">Hithaishi M.V</h1>
       <p class="tagline">AI/ML • Information Science • Developer</p>
-
+  <a href="Hithaishi_MV_resume.pdf" target="_blank" class="resume-btn below-photo">Resume</a>
       <div class="social-icons">
         <a href="https://github.com/Hithaishi8" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/hithaishi-m-v-9168642b3" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
-
-      <a href="mailto:Hithaishi.m.v.8@gmail.com" class="btn">Contact Me</a>
     </div>
   </header>
 
@@ -133,19 +111,23 @@
   </section>
 
   <section class="skills reveal">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>Flask & Streamlit</li>
-      <li>SQL / MySQL</li>
-      <li>HTML / CSS</li>
-      <li>Java (Basic)</li>
-      <li>C / C++</li>
-      <li>Git & GitHub</li>
-      <li>Eclipse</li>
-      <li>Jupyter Notebook</li>
-    </ul>
-  </section>
+  <h2>Tech Stack</h2>
+   <h2>Skills</h2>
+
+       <ul class="skills">
+        <li>Python</li>
+        <li>Flask & Streamlit</li>
+        <li>SQL / MySQL</li>
+        <li>HTML</li>
+        <li>Java (Basic)</li>
+        <li>C / C++</li>
+        <li>Git & GitHub</li>
+        <li>Eclipse</li>
+        <li>Jupyter Notebook</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
   <section class="projects reveal">
     <h2>Projects</h2>
@@ -230,6 +212,8 @@
     profileImg.addEventListener('mouseleave', () => {
       tooltip.style.opacity = 0;
     });
+  // Sparkle effect for skill items on hover
+
 </script>
 </body>
 </html>
